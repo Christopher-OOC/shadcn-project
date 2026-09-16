@@ -53,11 +53,40 @@ const AppSidebar = () => {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton>
-                    <Link href={item.url}>
+                  <SidebarMenuButton render={<Link href={item.url}>
                       <item.icon />
-                    </Link>
-                  </SidebarMenuButton>
+                      <span>{item.title}</span>
+                    </Link>} />   ,;[]
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton render={<Link href={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </Link>} />   ,;[]
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton render={<Link href={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </Link>} />   ,;[]
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
